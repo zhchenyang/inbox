@@ -1,0 +1,50 @@
+# VIM MAPPING
+
+## basic setting
+
+To enable key-repeating, execute the following in your Terminal, log out and back in, and then restart VS Code:
+
+```bash
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false              # For VS Code
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false      # For VS Code Insider
+defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false         # For VS Codium
+defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool false   # For VS Codium Exploration users
+defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
+```
+
+## key mapping
+
+mapping
+
+```vimL
+
+```
+
+## 输入切换
+
+详细参考(这里)[https://github.com/daipeihust/im-select]
+
+### 安装 `im-select`
+
+```bash
+# mac
+curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
+```
+
+### 配置
+
+```json
+{
+    // input method
+    "vim.autoSwitchInputMethod.enable": true,
+    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.US",
+    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+}
+```
+
+## TODO
+
+- [x] 输入切换
+- [x] `vimrc`
+
